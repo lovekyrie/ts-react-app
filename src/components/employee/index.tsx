@@ -34,9 +34,11 @@ class Employee extends Component<{}, State> {
     return (
       <>
         <QueryForm onDataChange={this.setEmployee}></QueryForm>
-        {this.getTotal}
+        {this.getTotal()}
         <Table columns={employeeColumns} dataSource={this.state.employee} className="table" />
       </>
     );
   }
 }
+
+export default Employee;

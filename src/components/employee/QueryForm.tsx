@@ -43,10 +43,22 @@ class QueryForm extends Component<Props, EmployeeRequest> {
     return (
       <Form layout="inline">
         <Form.Item>
-          <Input placeholder="姓名" style={{ width: 120 }} allowClear value={this.state.name} onChange={this.handleNameChange} />
+          <Input
+            placeholder="姓名"
+            style={{ width: 120 }}
+            allowClear
+            value={this.state.name}
+            onChange={this.handleNameChange}
+          />
         </Form.Item>
         <Form.Item>
-          <Select placeholder="部门" style={{ width: 120 }} allowClear value={this.state.departmentId} onChange={this.handleDepartmentChange}>
+          <Select
+            placeholder="部门"
+            style={{ width: 120 }}
+            allowClear
+            value={this.state.departmentId}
+            onChange={this.handleDepartmentChange}
+          >
             <Option value={1}>技术部</Option>
             <Option value={2}>产品部</Option>
             <Option value={3}>市场部</Option>
@@ -54,7 +66,9 @@ class QueryForm extends Component<Props, EmployeeRequest> {
           </Select>
         </Form.Item>
         <Form.Item>
-          <Button type="primary" onClick={this.handleSubmit}></Button>
+          <Button type="primary" onClick={this.handleSubmit}>
+            查询
+          </Button>
         </Form.Item>
       </Form>
     );
